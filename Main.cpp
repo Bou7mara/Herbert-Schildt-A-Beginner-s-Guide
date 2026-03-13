@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main() {
     cout << "Project 2-1" << endl;
@@ -12,5 +13,29 @@ int main() {
     q = false;
     if ((p||q)&&(!(p&&q))) XOR = true;
     else XOR = false;
-    cout << XOR << endl;
+    cout << XOR << "\n\n";
+
+    cout << "Project 2-3" << endl;
+    double principal;
+    double intRate;
+    int payPerYear;
+    int numYears;
+    double payment;
+
+    cout << "Enter loan principal: ";
+    cin >> principal;
+
+    cout << "Enter annual interest rate (decimal): ";
+    cin >> intRate;
+
+    cout << "Enter number of payments per year: ";
+    cin >> payPerYear;
+
+    cout << "Enter number of years: ";
+    cin >> numYears;
+
+    payment = (intRate * (principal / payPerYear)) /
+              (1 - pow((intRate / payPerYear) + 1, -payPerYear * numYears));
+
+    cout << "Regular payment: " << payment << endl;
 }
