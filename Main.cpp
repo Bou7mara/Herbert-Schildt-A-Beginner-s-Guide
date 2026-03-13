@@ -15,27 +15,43 @@ int main() {
     else XOR = false;
     cout << XOR << "\n\n";
 
-    cout << "Project 2-3" << endl;
-    double principal;
-    double intRate;
-    int payPerYear;
-    int numYears;
-    double payment;
+    // cout << "Project 2-3" << endl;
+    // double principal;
+    // double intRate;
+    // int payPerYear;
+    // int numYears;
+    // double payment;
 
-    cout << "Enter loan principal: ";
-    cin >> principal;
+    // cout << "Enter loan principal: ";
+    // cin >> principal;
+    //
+    // cout << "Enter annual interest rate (decimal): ";
+    // cin >> intRate;
+    //
+    // cout << "Enter number of payments per year: ";
+    // cin >> payPerYear;
+    //
+    // cout << "Enter number of years: ";
+    // cin >> numYears;
+    //
+    // payment = (intRate * (principal / payPerYear)) /
+    //           (1 - pow((intRate / payPerYear) + 1, -payPerYear * numYears));
+    //
+    // cout << "Regular payment: " << payment << "\n\n";
 
-    cout << "Enter annual interest rate (decimal): ";
-    cin >> intRate;
+    for(int num = 2; num <= 100; num++) {
+        bool isPrime = true;
 
-    cout << "Enter number of payments per year: ";
-    cin >> payPerYear;
+        for(int i = 2; i <= num / 2; i++) {
+            if(num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
 
-    cout << "Enter number of years: ";
-    cin >> numYears;
+        if(isPrime) {
+            cout << num << " ";
+        }
+    }
 
-    payment = (intRate * (principal / payPerYear)) /
-              (1 - pow((intRate / payPerYear) + 1, -payPerYear * numYears));
-
-    cout << "Regular payment: " << payment << endl;
 }
