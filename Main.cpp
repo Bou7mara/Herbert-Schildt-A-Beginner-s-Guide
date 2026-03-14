@@ -2,18 +2,18 @@
 #include <cmath>
 using namespace std;
 int main() {
-    cout << "Project 2-1" << endl;
-    double distance = 34000000.0, lightspeed = 186000.0;
-    double delay = distance/lightspeed;
-    cout << "In seconds (s), the delay is: " << delay << "\nAnd in minutes, it is: " << delay/60 << "\n\n";
-
-    cout << "Project 2-2" << endl;
-    bool p, q, XOR;
-    p = true;
-    q = false;
-    if ((p||q)&&(!(p&&q))) XOR = true;
-    else XOR = false;
-    cout << XOR << "\n\n";
+    // cout << "Project 2-1" << endl;
+    // double distance = 34000000.0, lightspeed = 186000.0;
+    // double delay = distance/lightspeed;
+    // cout << "In seconds (s), the delay is: " << delay << "\nAnd in minutes, it is: " << delay/60 << "\n\n";
+    //
+    // cout << "Project 2-2" << endl;
+    // bool p, q, XOR;
+    // p = true;
+    // q = false;
+    // if ((p||q)&&(!(p&&q))) XOR = true;
+    // else XOR = false;
+    // cout << XOR << "\n\n";
 
     // cout << "Project 2-3" << endl;
     // double principal;
@@ -39,19 +39,24 @@ int main() {
     //
     // cout << "Regular payment: " << payment << "\n\n";
 
-    for(int num = 2; num <= 100; num++) {
-        bool isPrime = true;
-
-        for(int i = 2; i <= num / 2; i++) {
-            if(num % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-        if(isPrime) {
-            cout << num << " ";
-        }
-    }
+    // for(int num = 2; num <= 100; num++) {
+    //     bool isPrime = true;
+    //
+    //     for(int i = 2; i <= num / 2; i++) {
+    //         if(num % i == 0) {
+    //             isPrime = false;
+    //             break;
+    //         }
+    //     }
+    //
+    //     if(isPrime) {
+    //         cout << num << " ";
+    //     }
+    // }
+    cout << "Test bodyless";
+    int sum = 0;
+    int factorial = 1;
+    for (int i = 0; i <= 5; sum += i++, factorial *= i);
+    cout << sum << "\n" << factorial;
 
 }
