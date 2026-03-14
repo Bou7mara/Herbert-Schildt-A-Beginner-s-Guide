@@ -53,10 +53,10 @@ int main() {
     //         cout << num << " ";
     //     }
     // }
-    cout << "Test bodyless";
+    cout << "Test bodyless \n";
     int sum = 0;
     int factorial = 1;
-    for (int i = 0; i <= 5; sum += i++, factorial *= i);
+    for (int i = 1; i <= 5; factorial *= i, sum += i++);
     cout << sum << "\n" << factorial;
 
 }
