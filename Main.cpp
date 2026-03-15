@@ -160,5 +160,25 @@ int main() {
     // }
     //
     // std::cout << "Number of periods: " << periods << '\n';
+    char ch;
+    int count = 0;
 
+    do {
+        cin >> ch;
+
+        switch(ch) {
+            case '.':
+                count++;
+                break;
+
+            case '$':
+                break;
+
+            default:
+                break;
+        }
+
+    } while(ch != '$');
+
+    cout << "Total number of periods: " << count << endl;
 }
