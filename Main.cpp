@@ -54,18 +54,61 @@ int main() {
     //     }
     // }
     char choice;
-    cout << "Sup boss, whatchu need help wiv??\na) if.\nb) switch.\n";
-    cout << "make your choice wisely:";
-    cin >> choice;
+
+    do {
+        cout << "Sup boss, whatchu need help wiv??\n";
+        cout << "a) if.\n";
+        cout << "b) switch.\n";
+        cout << "c) for.\n";
+        cout << "d) while.\n";
+        cout << "e) do-while.\n";
+        cout << "make your choice wisely: ";
+        cin >> choice;
+
+        if(choice < 'a' || choice > 'e') {
+            cout << "\nBruh, that's not a valid choice. Try again.\n\n";
+        }
+
+    } while(choice < 'a' || choice > 'e');
+
     switch(choice) {
         case 'a':
-            cout << "an if statement's syntax is the following:\n\nif(condition) statement;\nelse statement;";
+            cout << "\nAn if statement's syntax is:\n\n";
+            cout << "if(condition)\n    statement;\n";
+            cout << "else\n    statement;\n";
             break;
+
         case 'b':
-            cout << "a switch statement's syntax is the following:\n\nswitch(expression){\ncase constant:\nstatement sequence\nbreak;";
-            cout << "... more cases\n";
+            cout << "\nA switch statement's syntax is:\n\n";
+            cout << "switch(expression) {\n";
+            cout << "    case constant:\n";
+            cout << "        statement sequence\n";
+            cout << "        break;\n";
+            cout << "    // ... more cases\n";
+            cout << "}\n";
             break;
-        default: cout << "unrecognized case\n";
+
+        case 'c':
+            cout << "\nA for loop's syntax is:\n\n";
+            cout << "for(initialization; condition; update) {\n";
+            cout << "    statement;\n";
+            cout << "}\n";
+            break;
+
+        case 'd':
+            cout << "\nA while loop's syntax is:\n\n";
+            cout << "while(condition) {\n";
+            cout << "    statement;\n";
+            cout << "}\n";
+            break;
+
+        case 'e':
+            cout << "\nA do-while loop's syntax is:\n\n";
+            cout << "do {\n";
+            cout << "    statement;\n";
+            cout << "} while(condition);\n";
+            break;
     }
+
 
 }
