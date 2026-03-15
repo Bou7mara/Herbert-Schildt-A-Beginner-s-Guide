@@ -53,10 +53,19 @@ int main() {
     //         cout << num << " ";
     //     }
     // }
-    cout << "Test bodyless \n";
-    int sum = 0;
-    int factorial = 1;
-    for (int i = 1; i <= 5; factorial *= i, sum += i++);
-    cout << sum << "\n" << factorial;
+    char choice;
+    cout << "Sup boss, whatchu need help wiv??\na) if.\nb) switch.\n";
+    cout << "make your choice wisely:";
+    cin >> choice;
+    switch(choice) {
+        case 'a':
+            cout << "an if statement's syntax is the following:\n\nif(condition) statement;\nelse statement;";
+            break;
+        case 'b':
+            cout << "a switch statement's syntax is the following:\n\nswitch(expression){\ncase constant:\nstatement sequence\nbreak;";
+            cout << "... more cases\n";
+            break;
+        default: cout << "unrecognized case\n";
+    }
 
 }
